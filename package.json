@@ -1,0 +1,48 @@
+{
+  "name": "ipfs-action",
+  "version": "0.1.5",
+  "description": "IPFS upload action",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --max-warnings 0 **/*.js",
+    "prune-prod": "npm prune --production",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquiladev/ipfs-action.git"
+  },
+  "keywords": [
+    "IPFS",
+    "GitHub",
+    "action",
+    "upload",
+    "deploy",
+    "deployment",
+    "delivery"
+  ],
+  "author": "Sergii Bomko <aquila.ua@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aquiladev/ipfs-action/issues"
+  },
+  "homepage": "https://github.com/aquiladev/ipfs-action#readme",
+  "dependencies": {
+    "@actions/core": "1.2.6",
+    "@actions/github": "2.1.0",
+    "@octokit/rest": "16.17.0",
+    "@pinata/sdk": "1.1.10",
+    "ipfs-http-client": "44.3.0",
+    "it-all": "1.0.1",
+    "minimist": "1.2.5"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "jest": "25.1.0",
+    "release-it": "13.6.7"
+  },
+  "eslintIgnore": [
+    "*.test.js"
+  ]
+}
