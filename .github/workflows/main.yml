@@ -48,10 +48,10 @@ jobs:
           pinataKey: ${{ secrets.PINATA_KEY }}
           pinataSecret: ${{ secrets.PINATA_SECRET }}
           pinataPinName: "pin_name"
-        uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v1
         with:
           path: ./
-        uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v1
         id: ipfs
         with:
           path: ./build
@@ -60,7 +60,7 @@ jobs:
           protocol: https
           timeout: 180000
           verbose: true
-        uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v1
         with:
           path: ./build
           service: pinata
