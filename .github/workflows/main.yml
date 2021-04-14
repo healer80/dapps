@@ -5,17 +5,17 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  upload-ipfs:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v0.1.1
         with:
           path: ./
       
-      - uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v0.1.1
         id: ipfs
         with:
           path: ./build
@@ -25,7 +25,7 @@ jobs:
           timeout: 180000
           verbose: true
 
-      - uses: aquiladev/ipfs-action@v1
+      - uses: aquiladev/ipfs-action@v0.1.1
         with:
           path: ./build
           service: pinata
